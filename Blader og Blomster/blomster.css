@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+
+}
+h1{
+    color: rgb(235, 111, 177);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration:none;
+    width: 200px;
+    margin: auto;
+}
+li{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+h2{
+    color: rgb(235, 111, 177);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+#blomster{
+    width: 800px;
+    margin: auto;
+    
+
+}
+#hoved{
+    width: 800px;
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+#top{
+    background-image:url(https://dbdzm869oupei.cloudfront.net/img/quadres/preview/30081.png) ;
+    background-position-y: center;
+    background-size: 100%;
+    background-position-x: top;
+    width: 800px ;
+    height: 100px;
+    margin: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+a{
+    color: plum;
+    text-decoration: none;
+    
+    }
+    #linking{
+        width: 800px;
+        margin: auto;
+    }
+    a:hover{
+        color: white;
+        text-decoration: none;
+    }

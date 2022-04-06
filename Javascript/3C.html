@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let riktigTall = 42;
+      let gjettet = Number(prompt("Skriv inn et tall#"));
+      console.log(gjettet == riktigTall); // gir
+
+      console.log(gjettet > riktigTall);
+      console.log(gjettet < riktigTall);
+
+      if (gjettet > riktigTall) {
+        console.log("større enn riktig");
+      } else {
+        console.log("mindre enn riktig");
+      }
+
+      console.log(5 == "5"); // skriver ut true
+      console.log(5 === "5"); // skriver ut false
+
+      console.log(5 != 4); // skriver ut true
+      console.log(5 != 5); // skriver ut false
+      console.log(5 != "5"); // skriver ut false
+      console.log(5 !== 4); // skriver ut true
+      console.log(5 !== "5"); // skriver ut true
+    </script>
+  </body>
+</html>

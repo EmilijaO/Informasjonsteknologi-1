@@ -1,0 +1,325 @@
+<script>
+/*
+ Vi lager en funksjon i JavaScript ved å bruke nøkkelordet function
+function funksjonsNavn() {
+- kode - }
+
+Funksjonen ovenfor heter siHei(), og skriver ordet «Hei» til konsollen.
+
+function siHei() {
+console.log("Hei"); }
+
+EKSEMPEL:
+
+// Funksjonen siHei() skriver "Hei" til konsollen
+function siHei() {
+console.log("Hei");
+}
+
+// For å bruke funksjonen, skriver vi funksjonsnavnet
+siHei();
+
+// Vi kan bruke den samme funksjonen mange ganger
+siHei();
+siHei();
+siHei();
+
+
+
+Funksjonen siHei(), som vi laget på forrige side, gir det samme resultatet hver gang vi
+bruker den. Ofte ønsker vi at en funksjon skal gi forskjellige resultater i ulike
+situasjoner.For å få til det kan vi «gi» en verdi til en funksjon.
+Denne verdien kalles en parameter:
+
+function siHeiTil(navn) {
+console.log("Hei, " + navn + "!");
+}
+siHeiTil("Jesper");
+
+*Parameter er variabelnavnene som oppgis når vi lager en funksjon.
+*Argumenter er verdiene som sendes til en funksjon når vi bruker funksjonen.
+
+EKSEMPEL:
+I eksemplet ovenfor er altså navn et eksempel på en parameter,
+mens "Jesper" er et eksempel på et argument.
+
+- Hvis vi ikke sender med verdier når en funksjon forventer parametre,
+eller hvis vi sender verdier med feil datatype, vil parametrene få verdien undefined.
+Det vil si at vi får skrevet ut «Hei, undefined!» hvis vi skriver siHeiTil()
+uten å angi et navn.
+
+EKSEMPEL:
+
+function arealRektangel(lengde, bredde) {
+let areal = lengde * bredde;
+console.log("Arealet av rektanglet er " + areal);
+}
+arealRektangel(4, 8)
+
+
+RETURVERDI:
+console.log(Math.floor(3.23)); // skriver ut 3
+- Det betyr at setningen Math.floor(3.23); gir oss verdien 3, og ingenting annet.
+Denne verdien kaller vi en returverdi, og vi kan for eksempel lagre den i en variabel,
+eller bruke den direkte i annen kode:
+
+let tall = 17.29;
+let avrundet = Math.floor(tall);
+
+console.log("Vi får " + avrundet + " hvis vi runder ned " + tall);
+
+- For å få en returverdi fra en funksjon bruker vi nøkkelordet return i JavaScript.
+
+function arealRektangel(lengde, bredde) {
+let areal = lengde * bredde;
+return areal;
+}
+
+                ELLER
+
+                function arealRektangel(lengde, bredde) {
+                return lengde * bredde;
+              }
+              console.log("Arealet av et rektangel med sidelengder 8 og 4, er: " + arealRektangel(8,4));
+
+              - I tillegg til å returnere verdier blir funksjoner
+               umiddelbart avsluttet med nøkkelordet return:
+
+               function sjekkMyndig(alder) {
+                if (alder >= 18) {
+                  return "myndig";
+                } else {
+                  return "ikke myndig";
+                }
+              }
+
+              FEIL^^^^ - Denne funksjonen starter med å undersøke om alder er større enn eller lik 18.
+               Hvis det er tilfellet, vil funksjonen umiddelbart bli avsluttet med returverdien
+               "myndig" (return "myndig";). Det vil si at all kode som befinner seg etter
+               return "myndig";, ikke vil få noen effekt. Vi kan derfor skrive om funksjonen ovenfor:
+
+               function sjekkMyndig(alder) {
+                if (alder >= 18) {
+                  return "myndig";
+                }
+
+                return "ikke myndig";
+              }
+
+
+
+              ET EKSEMPEL FRA BOKA
+
+              let toLike = false;    // settes til true når vi får to like
+              let antallForsok = 0;  // lar oss telle antall forsøk
+
+              // Så lenge vi ikke har fått to like
+              while(!toLike) {
+                // Øker antall forsøk med 1
+                antallForsok++;
+
+                // triller to terninger
+                let terning1 = terning();
+                let terning2 = terning();
+
+                console.log("Fikk " + terning1 + ", " + terning2);
+
+                // Undersøker om de to terningene er like
+                if (terning1 === terning2) {
+                  toLike = true;
+                  console.log("Fikk to like på " + antallForsok + " forsøk");
+                }
+              }
+
+
+              EKSEMPEL::
+
+              let tall = 4;
+
+              function dobbel(tall) {
+                tall = tall * 2;
+                return tall;
+              }
+
+              console.log("Det dobbelte av " + tall + " er " + dobbel(tall));
+
+
+              EKSEMPEL:::
+
+              
+             * Regner om fra norsk valuta til svensk eller dansk valuta
+             *
+             * Parameter (Number) verdi – verdi i norske kroner
+             * Parameter (String) valuta - "DKK" eller "SEK"
+             *
+             * Returnerer (Number) den nye valutaen
+             
+            function valutaKalkulator(verdi, valuta) {
+              if (valuta == "DKK") {
+                return verdi * 0.73;
+              } else if (valuta == "SEK") {
+                return verdi * 0.99;
+              }
+            }
+
+            ARRAY EKSEMPEL:::
+
+            let tall = [4, 6, 14, 75, 3, 17, 42];
+            let byer = ["Bergen", "Bodø", "Oslo", "Kristiansand", "Trondheim"];
+
+            - Vi bruker hakeparenteser for å finne de ulike verdiene i en array:
+
+            console.log(tall[0]); // Skriver ut: 4
+            console.log(tall[3]); // Skriver ut: 75
+            console.log(byer[2]); // Skriver ut: "Oslo"
+            console.log(byer[4]); // Skriver ut: "Trondheim"  ^^^^
+
+
+            -  Vi kan bruke length til å finne antall verdier i de to arrayene våre:
+
+            console.log(tall.length); // Skriver ut: 7
+            console.log(byer.length); // Skriver ut: 5
+
+
+            - For å redigere verdier som allerede er i en array,
+             kan vi bruke samme framgangsmåte som for en variabel:
+
+            let tall = [4, 2, 5, 8, 12];
+            console.log(tall[2]); // Skriver ut: 5
+            tall[2] = 42;
+            console.log(tall); // Skriver ut: [4, 2, 42, 8, 12]
+
+
+            - For å legge til nye verdier finnes det to metoder vi kan bruke: push(),
+             som legger til en verdi bakerst i en array, og unshift(),
+             som legger til en verdi i starten av en array.
+
+             let tall = [2, 3, 4];
+            tall.push(5);
+            console.log(tall); // Skriver ut: [2, 3, 4, 5]
+            tall.unshift(1);
+            console.log(tall); // Skriver ut: [1, 2, 3, 4, 5]
+
+
+             - For å fjerne verdier finnes det to tilsvarende metoder: pop(),
+              som fjerner den siste verdien i en array, og shift(),
+              som fjerner den første verdien i en array.
+
+              let tall = [1, 2, 3, 4];
+            tall.pop();
+            console.log(tall); // Skriver ut: [1, 2, 3]
+            tall.shift();
+            console.log(tall); // Skriver ut: [2, 3]
+
+
+
+            -Metoden indexOf() gir oss den første forekomsten av verdien i arrayen.
+
+            let tall = [2, 4, 7, 14, 7, 42];
+          console.log(indexOf(7)); // Skriver ut: 2
+
+            - Det finnes også en lignende metode, lastIndexOf(),
+             som gir oss den siste forekomsten av en verdi
+
+          - Vi har sett at det er greit å fjerne første og siste verdi fra en array,
+          men vi kan også få bruk for å fjerne en verdi som er i midten av en array.
+          Til det bruker vi metoden splice().
+
+          let tall = [1, 2, 3, 4, 5];
+          tall.splice(2, 1);
+          console.log(tall); // Skriver ut: [1, 2, 4, 5]
+
+          OGSÅ
+
+          let tall = [1, 2, 3, 6];
+          tall.splice(3, 0, 4, 5);
+          console.log(tall); // Skriver ut: [1, 2, 3, 4, 5, 6]
+
+
+          - Husk at en for-løkke kan gå gjennom en serie med hele tall som vi bestemmer.
+          Hvis en array inneholder 10 verdier, så vil vi at løkken skal gå gjennom tallene
+           0, 1, 2, 3, 4, 5, 6, 7, 8 og 9. En passende løkke kan derfor se slik ut:
+
+           for (let i = 0; i < 10; i++) {
+            console.log(i);
+          }
+
+         - array og for løkker
+
+         let tall = [1, 2, 3, 4, 6, 8, 12];
+
+         console.log(tall.length); // Skriver ut: 7
+
+        - Nå vet vi nok til å lage en for-løkke. Vi skal starte på 0,
+        øke med én for hver runde, og holde på så lenge tallet er mindre enn
+         arrayens lengde (her 7):
+
+
+         for (let i = 0; i < tall.length; i++) {
+          console.log(tall[i]);
+        }
+
+
+
+        - Vi møter da en veldig vanlig situasjon der vi må lage en egen variabel
+         for å holde orden på summen. Det er viktig at vi lager den variabelen
+          utenfor løkken, slik at den ikke blir laget på nytt hele tiden.
+          Vi gir også variabelen verdien 0 for å forsikre oss om at den får riktig datatype.
+           Summen av tallene finner vi derfor slik:
+
+           let sum = 0;
+
+        for (let i = 0; i < tall.length; i++) {
+          sum += tall[i];
+        }
+
+        console.log(sum); // Skriver ut: 36
+
+
+        - Hvordan kan vi finne det største tallet i arrayen tall?
+
+        // Lagrer det første tallet i arrayen i en variabel
+        let storst = tall[0];
+
+        for (let i = 0; i < tall.length; i++) {
+          if (tall[i] > storst) {
+            storst = tall[i];
+          }
+        }
+
+        console.log(storst); // Skriver ut: 12
+
+
+        Array i funksjon
+
+        - Vi kan for eksempel lage en funksjon som summerer tallene i en array:
+
+        function summer(tallArray) {
+        let sum = 0;
+        for (let i = 0; i < tallArray.length; i++) {
+          sum += tallArray[i];
+        }
+
+        return sum;
+      }
+
+      - Denne funksjonen bruker vi slik:
+
+      let mineTall = [2, 4, 6, 8];
+    console.log(summer(mineTall));
+
+    -  Vi kan lage en ny løkke inni den første,
+    slik at vi får gått gjennom hver av de indre arrayene også:
+
+    let retter = [
+    ["laksetartar", "ertesuppe"],
+    ["biff med rødvinssaus", "lammeskank"],
+    ["jordbæris", "eplekake"]
+  ];
+
+    for (let i = 0; i < retter.length; i++) {
+    for (let j = 0; j < retter[i].length; j++) {
+      console.log(retter[i][j]);
+    }
+  }
+  /*

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Oppgave 1//
+      //a)//
+      let byer = [
+        "Venezia",
+        "Liverpool",
+        "New York",
+        "Lisboa",
+        "Berlin",
+        "San Francisco",
+        "Amsterdam",
+      ];
+      {
+        byer.push("Budapest");
+      }
+      //b)//
+      for (let i = 0; i < byer.length; i++) {
+        console.log(byer[i]);
+      }
+
+      //c)//
+      let a = 0;
+      function Byene() {
+        let tilfeldigBy = " ";
+        for (let i = 0; i < 1; i++) {
+          let x = Math.floor(Math.random() * 7 + 1);
+          tilfeldigBy += byer[x];
+        }
+        console.log(`Din 1. destinasjon er ${tilfeldigBy}.`);
+        byer.splice();
+      }
+
+      Byene();
+
+      //d)//
+    </script>
+  </body>
+</html>

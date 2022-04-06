@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Loop over the 2 arrays and if there are any common courses, if so console.log them/*/
+
+      let student1Courses = ["Math", "English", "Programming"];
+      let student2Courses = ["Geography", "Spanish", "English"];
+      for (let i = 0; i < student1Courses.length; i++) {
+        for (let a = 0; a < student2Courses.length; a++) {
+          if (student1Courses[i] == student2Courses[a]) {
+            console.log(`Begge har faget ${student1Courses[i]}.`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

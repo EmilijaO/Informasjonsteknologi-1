@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Lage et spill der du må gjette på tallet datamskinen har trukket tilfeldig fra 1-10
+      // Du må gjette på nytt hvis det er feil.
+      // Hvis du gjetter rett skal programmet avslutte med en gratulasjon og antall forsøk.
+
+      // Del 2: Du får tips om tallet du gjettet var for høyt eller lavt.
+      // Øk også antall tall fra 10 til 100, hva med 1000?
+
+      let riktigTall = Math.floor(Math.random() * 100 + 1);
+      let gjettet = Number(prompt("Skriv inn et tall fra (1-100)"));
+      let ant = 1;
+      console.log(gjettet == riktigTall);
+
+      while (gjettet != riktigTall) {
+        if (gjettet > tall) {
+          gjettet = Number(prompt("Det er feil. Tallet er lavere:"));
+        } else {
+          gjettet = Number(prompt("Det er feil. Tallet er høyere:"));
+        }
+        ant++;
+      }
+      alert(`Gratulerer, ${gjettet} er rett. Antall kast til 9-er var: ${ant}`);
+    </script>
+  </body>
+</html>

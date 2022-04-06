@@ -1,0 +1,16 @@
+<script>
+  let tall = [1, 4, 7, 2, 9, 10, 3, 8];
+  function bubble(tall) {
+    for (let i = 0; i < tall.length; i++) {
+      for (let j = 0; j < tall.length - i - 1; j++) {
+        if (tall[j] > tall[j + 1]) {
+          let mid = tall[j];
+          tall[j] = tall[j + 1];
+          tall[j + 1] = mid;
+        }
+      }
+      console.log(tall);
+    }
+  }
+  bubble(tall);
+</script>

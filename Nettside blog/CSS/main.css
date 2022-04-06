@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+#main-wrapper {
+  max-width: 800px;
+  min-height: 100vh;
+  background-color: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "h h h h h h"
+    "m m m m r r"
+    "f f f f f f";
+}
+#header {
+  grid-area: h;
+  padding: 10px;
+}
+#main {
+  grid-area: m;
+  padding: 10px;
+}
+#right {
+  grid-area: r;
+  padding: 10px;
+}
+#footer {
+  background-color: rgb(214, 185, 214);
+  height: 200px;
+  grid-area: f;
+}
+h1 {
+  margin: 0;
+}
+#menu {
+  background-color: grey;
+  display: flex;
+  justify-content: right;
+  margin: 0-10px;
+}
+#menu a {
+  padding: 5px 10px 5px 10px;
+  border-left: 3px solid black;
+  text-decoration: none;
+  color: brown;
+  text-transform: uppercase;
+}
+
+#menu a:hover {
+  background-color: rgb(202, 199, 199);
+}

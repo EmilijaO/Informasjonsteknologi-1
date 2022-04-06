@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fortsett = true;
+      let poengSpiller = 0;
+      let poengData = 0;
+
+      let valg = Number(
+        prompt(
+          `Spiller vs Datamaskin\n ${poengSpiller}-${poengData}\nStein =\nSaks = 2\nPapir = 3`
+        )
+      );
+      let data = Math.floor(Math.random() * 3 + 1);
+
+      if (valg == 1) {
+        if (data == 2) {
+          poengSpiller++;
+        }
+        if (data == 3) {
+          poengData++;
+        }
+      } else if (valg == 2) {
+        if (data == 3) {
+          poengSpiller++;
+        }
+        if (data == 1) {
+          poengData++;
+        }
+      } else if (valg == 3) {
+        if (data == 1) {
+          poengSpiller++;
+        }
+        if (data == 2) {
+          poengData++;
+        } else {
+          // skrev inn noe feil
+        }
+      }
+      if (poengSpiller > poengData) {
+        alert("Seier!");
+      } else {
+      }
+
+      while (poengSpiller < 2 || poengData < 2) {}
+    </script>
+  </body>
+</html>

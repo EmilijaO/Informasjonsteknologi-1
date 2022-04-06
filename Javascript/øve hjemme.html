@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // PRØVE
+
+      // Vi kan sammenligne verdier med sammenligningsoperatorer
+
+      // != --> Ikke lik verdi
+      // !== --> Ikke lik verdi eller ikke lik datatype               ..... osv..
+
+      // Sammenligning - logiske aparatorer:
+
+      // && --> Og (begge er sanne)
+      // || --> Eller (én eller begge er sanne)
+      // ! --> Ikke
+
+      // If-setninger:
+
+      // if (betingelse 1) {kode}
+      // else if (betingelse 2) {kode}
+      // else {kode}
+
+      // Eksempel:
+      if (alder <= 3) {
+        console.log(`Barn på ${alder} år kjører gratis.`);
+      } else if (alder >= 16 && alder <= 66) {
+        console.log(`En person på ${alder} år får ingen rabatt.`);
+      } else {
+        console.log(`En person på ${alder} år får 50% rabatt.`);
+      }
+
+      // Tilfeldige tall:
+
+      // Metoden Math.random() gir oss et tilfeldig tall som er større enn eller lik 0 og mindre enn 1
+      // Ganger vi et tall mellom 0 og 1 med 3, får vi nemlig et tall mellom 0 og 3
+      // Metoden Math.floor() runder et tall ned til nærmeste heltall
+
+      // Eksempel:
+      let tilfeldig = Math.floor(Math.random() * 3);
+
+      if (tilfeldig === 0) {
+        console.log("Du er den beste koderen i landet!");
+      } else if (tilfeldig === 1) {
+        console.log("Steve Jobs kan ikke måle seg med deg!");
+      } else if (tilfeldig === 2) {
+        console.log("Du er den neste Mark Zuckerberg!");
+      }
+
+      // While-løkke:
+
+      // En while-løkke lar oss gjenta kode så lenge en betingelse er sann:
+      // EKS: while (betingelse) {kode}
+      // let i = 1;
+      // Eksempel:   while (i <= 100) { console.log(i); i++;}
+
+      //For-løkke:
+
+      // En for-løkke lar oss gjenta kode et bestemt antall ganger:
+      // EKS: for (start; betingelse; endring) {kode}
+      // Eksempel: for (let i = 1; i <= 100; i++) {console.log(i);}
+
+      // Variabler:
+
+      // En variabel er et navn som peker på en verdi i datamaskinens minne. Verdien til en variabel kan variere.
+      // Vi lager (deklarerer) en variabel med nøkkelordet let.
+      // Navnet kan ikke starte med et tall, inneholde bindestreker eller punktum, eller være det samme som et JavaScript-nøkkelord.
+      // tillegg bør vanlige variabelnavn skrives med små bokstaver
+      // Variabelnavn som består av flere ord, bør deles opp ved å bruke stor forbokstav (camel case), for eksempel antallMulige i stedet for antallmulige.
+      // Vi bruker ikke stor forbokstav på det første ordet.
+
+      // Datatyper:
+
+      // JavaScript bruker datatypene number (tall), string (tekst) og boolean (true/false) for å skille mellom ulike typer data
+      // Datatypen string (tekst) har egne metoder som lar oss manipulere tekster:
+      // indexOf() lar oss lete etter tegn i tekster
+      // substring() lar oss dele opp en tekst
+      // toUpperCase() gjør om alle bokstaver i en tekst til store bokstaver
+      // toLowerCase() gjør om alle bokstaver i en tekst til små bokstaver
+
+      // Gjøre om datatyper:
+
+      // Vi kan gjøre om fra tekst (string) til tall (number) med funksjonen Number(), og fra tall (number) til tekst (string) med funksjonen String()
+      // Vi kan undersøke om et tall er et heltall med Number.isInteger(). Denne funksjonen gir true hvis tallet er et heltall, og false hvis det ikke er et flyttall (og hvis det ikke er et tall i det hele tatt)
+      // Vi kan gjøre om tall til heltall med parseInt() og til flyttall med parseFloat().
+
+      // Aritmetiske operatorer (matematikk):
+
+      // let sum = 4 + 8;
+      // let differanse = 9 - 6;
+      //let produkt = 8 * 7;
+      //let kvotient = 15 / 3
+
+      // Modolus:
+
+      // Vi har også den litt underlige modulus-operatoren (%), som gir oss resten ved deling:
+      // let rest1 = 9 % 3;
+      // let rest2 = 8 % 3;
+      // Her får rest1 verdien 0, fordi 9 delt på 3 er 3, med rest 0, mens rest2 får verdien 2, fordi 8 delt på 3 er 2, med rest 2.
+
+      // (--) (++) Hvis vi for eksempel lager et basketballspill, og noen scorer en 3-poenger, kan vi løse det slik:
+      // let poeng = 0;
+      // poeng    += 3;
+    </script>
+  </body>
+</html>

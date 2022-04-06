@@ -1,0 +1,23 @@
+#box{
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+img{
+    width: 400px;
+    height: 200px;
+    
+}
+
+a{
+    color: pink;
+    text-decoration: none;
+}
+a:hover{
+    color: royalblue;
+    text-decoration: none;
+}

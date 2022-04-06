@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let list = [1, 2, 3, 4, 5, 6, 7];
+      let høy = list.length - 1;
+      let lav = 0;
+      let ønsketTall = 5;
+      for (i = 0; i < 100; i++) {
+        let start = Math.floor((høy + lav) / 2);
+        console.log(lav, start, høy);
+        if (list[start] < ønsketTall) {
+          lav = start + 1;
+        } else if (list[start] > ønsketTall) {
+          høy = start - 1;
+        } else {
+          console.log("Du fant rett");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

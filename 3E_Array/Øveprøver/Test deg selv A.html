@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Ole liker tilfeldige tall, men han misliker tallet 7. Han ønsker seg mange
+ tilfeldige tall, men ingen av dem skal være tallet 7. Du skal lage en array
+  med tilfeldige tall til Ole, og du skal løse det på denne måten:
+	
+a) Lag en funksjon som returnerer et tilfeldig tall 
+fra og med 1 til og med 10, altså et av tallene 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+	
+b) Lag en annen funksjon som fyller en array med n slike tilfeldige tall.
+ Bruk funksjonen for å lage en array med 1000 tilfeldige tall.
+	
+c) Lag en annen funksjon som går gjennom en array og fjerner alle forekomster av
+ tallet 7. Funksjonen skal telle antall syvere den fjerner og skrive ut en 
+ passende tekst i konsollen. Bruk funksjonen på din array.
+	
+d) Lag en ny funksjon som går gjennom en array og skriver ut alle verdiene til
+ konsollen på formen: «Verdi med indeks x: y». Bruk funksjonen for å skrive ut din array./*/
+
+      // a)
+
+      function tilfeldig() {
+        let tall = [];
+        for (let i = 1; i <= 10; i++) {
+          return Math.floor(Math.random() * 10 + 1);
+        }
+      }
+      console.log(tilfeldig());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tilfeldig() {
+        let tall = [];
+        for (let i = 1; i <= 10; i++) {
+          return Math.floor(Math.random() * 10 + 1);
+        }
+      }
+
+      function fyllArray(n) {
+        let array = [];
+        for (let i = 0; i < 1000; i++) {
+          array.push(tilfeldig());
+        }
+        return array;
+      }
+
+      let arrayMedTilfeldigeTall = fyllArray();
+
+      function fjern7(array) {
+        let fjernet = 0;
+        for (let i = array.length; i >= 0; i--) {
+          if (array[i] == 7) {
+            array.splice(i, 1);
+            fjernet++;
+          }
+        }
+        console.log(`Det ble fjernet ${fjernet} 7-ere`);
+        return array;
+      }
+      let arrayUtenSyvere = fjern7(arrayMedTilfeldigeTall);
+    </script>
+  </body>
+</html>

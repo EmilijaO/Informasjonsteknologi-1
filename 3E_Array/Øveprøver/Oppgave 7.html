@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Compare the 2 arrays and find common food if any/*/
+
+      let food1 = ["Noodle", "Pizza", "Ice-cream"];
+      let food2 = ["Fries", "Ice-cream", "Pizza"];
+
+      for (let i = 0; i < food1.length; i++) {
+        for (let a = 0; a < food2.length; a++) {
+          if (food1[i] == food2[a]) {
+            console.log(`Begge inneholder ${food1[i]}.`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
