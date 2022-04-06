@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+#main-wrapper {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  min-height: 200vh;
+}
+#menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+}
+#menu a {
+  background-color: plum;
+  text-decoration: none;
+  color: purple;
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: pink 2px 1px 2px 2px;
+  margin: 10px;
+}
+#menu a:hover {
+  color: pink;
+  text-decoration: none;
+}
+h1 {
+  color: purple;
+  margin: 10px;
+}
+p {
+  margin: 10px;
+}
+h2 {
+  margin: 10px;
+  color: pink;
+}

@@ -1,0 +1,47 @@
+body{
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(245, 117, 202);
+    text-decoration: none;
+}
+#tallpunkt{
+width: 800px;
+margin: auto;
+background-color: beige;
+border: 3px solid rgb(7, 7, 7);
+border-radius: 10px;
+padding: 10px;
+}
+#punkt{
+    width: 800px;
+    margin: auto;
+    background-color: beige;
+    border: 3px solid rgb(7, 7, 7);
+    padding: 10px;
+}
+h3{
+    font-family: sans-serif;
+    color: teal;
+    text-decoration: none;
+}
+li{
+    color: tomato;
+    text-decoration: none;
+}
+img{
+    margin: auto;
+    width: 600px;
+display: block;
+}
+a:hover{
+    color: violet;
+    text-decoration: none;
+
+}
+a{
+    color: wheat;
+    text-decoration: none;
+}

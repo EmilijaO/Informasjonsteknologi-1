@@ -1,0 +1,14 @@
+body{
+    background-color: teal;
+    width: 800px;
+    margin: auto;
+
+}
+#top{
+    background-image:url(https://www.kristiania.no/contentassets/545153bdc3a547018d7d6b4189705f2e/bachelor-informasjonsteknologi-ebusiness-hoyskolen-kristiania.jpg?w=800);
+    
+    background-size: 100%;
+    background-position-y: center;
+    height: 125px;
+    width: 800px;
+}
